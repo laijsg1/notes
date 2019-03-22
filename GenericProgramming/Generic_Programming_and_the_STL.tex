@@ -3,7 +3,40 @@
 \title{notes of Generic Programming}
 \author{}
 \begin{document}
-   \begin{enumerate}
-       \item ddddd
-   \end{enumerate}
+\section{Summary of STL}%
+\label{sec:summary}
+    \paragraph{To use the STL to extend it.}%
+    \label{par:to_use_the_stl_to_extend_it_}
+    \paragraph{The STL algorithms are decoupled from the containers.}%
+    \label{par:the_stl_algorithms_are_decoupled_from_the_containers_}
+    \paragraph{The STL is extensible and customizable without inheritance.}%
+    \label{par:the_stl_is_extensible_and_customizable_without_inheritance_}
+    \paragraph{Abstraction need not mean inefficiency.}%
+    \label{par:abstraction_need_not_mean_inefficiency_}
+\section{Ranges}%
+\label{sec:}
+
+    \paragraph{There are several reasons why a pointer to the end of the sequence is more convenient than an integer conut}%
+    \label{par:there_are_several_reasons_why_a_pointer_to_the_end_of_the_sequence_is_more_convenient_than_an_integer_conut}
+        \subparagraph{first, that's how we would probably implement the search anyway; incrementing a pointer is easier than maintaining a separate count.}%
+        \label{par:first_that_s_how_we_would_probably_implement_the_search_anyway_incrementing_a_pointer_is_easier_than_maintaining_a_separate_count_}
+        \subparagraph{Second, it's more cinsistent. The beginning and end of the sequence are represented the same way, as is the return value.This makes it easier to use the result of one search operation as an input to the next.}%
+        \label{par:second_it_s_more_cinsistent_the_beginning_and_end_of_the_sequence_are_represented_the_same_way_as_is_the_return_value_this_makes_it_easier_to_use_the_result_of_one_search_operation_as_an_input_to_the_next_}
+\section{What Is a Concept?}%
+\label{sec:what_is_a_concept_}
+    \begin{enumerate}
+      \item A concept can be thought of as a list of type requirements.
+      \item A concept can be thought of as a set of types.
+      \item A concept can be thought of as a list of valid programs.\\ The concept itself consists of the properties that the type Iterator has in common in all of those algorithms.
+    \end{enumerate}
+\section{What Is an Iterator}%
+\label{sec:what_is_an_iterator}
+  \begin{enumerate}
+    \item Iterators are a generalization of pointers;they are objects that point to other objects.
+    \item they are used to iterate over a range of objects.
+    \item The reason iterators are important to generic programming is that they are an interface between algorithms and data structures.
+  \end{enumerate}
+
+
+    
 \end{document}

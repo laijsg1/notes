@@ -1,0 +1,73 @@
+\documentclass[UTF8]{article}
+\usepackage{ctex}
+\title{\textbf{5.1}}
+\begin{document}
+\maketitle
+	\section{UDP}
+	\begin{enumerate}
+		\item checksum
+		\begin{enumerate}
+			\item 为什么需要校验和
+		\end{enumerate}
+	\end{enumerate}
+	\section{可靠传输原理}
+	\begin{enumerate}
+		\item rdt1.0
+		\begin{enumerate}
+			\item ACK
+			\item NAK
+		\end{enumerate}
+		\item rdt2.1
+		\begin{enumerate}
+			\item 加序号，有回应
+			\item 
+		\end{enumerate}
+		\item rdt2.2
+		\begin{enumerate}
+			\item 
+		\end{enumerate}
+		\item rdt3.0
+		\begin{enumerate}
+			\item New assumption:\\	
+			underlying channel can lose packets.
+			\item approach:\\
+			set Timeout\\
+			require countdown timer
+			\item performance stinks
+		\end{enumerate}
+		\item Pipelining
+		\begin{enumerate}
+			\item sender allows multiple.
+			\item Two generic forms of pipelined protocol
+			\begin{enumerate}
+				\item go-Back-N(silding-window protocol)
+				\item selective repeat\\
+				receiver individually acknowledges all correctly received pkts
+			\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
+		
+	\section{TCP}
+	\begin{enumerate}
+		\item ...
+		\begin{enumerate}
+			\item point to point
+			\item reliable,in-order byte
+			\item pipelined
+			\item send \&receive buffers
+			\item full duplex data
+			\item connection-oriented
+			\item flow controlled
+		\end{enumerate}
+		\item TCP seg construction
+		\begin{enumerate}
+			\item sequence number
+			\item 
+		\end{enumerate}
+		\item how to set TCP timeout value?\\
+		longer than RTT 
+		\item how to estimate RTT?\\
+		average several recent measurements, not just current SampleRTT
+	\end{enumerate}
+	
+\end{document}

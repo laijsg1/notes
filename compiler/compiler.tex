@@ -1,0 +1,62 @@
+\documentclass[UTF8]{article}
+\usepackage{ctex}
+\usepackage{graphicx}
+
+\title{\textbf{编译原理}}
+\begin{document}
+	\maketitle
+	\section{语法分析}
+		\subsection{自顶向下分析}
+		\begin{enumerate}
+			\item 自顶向下分析\\
+			从分析树的顶部（根节点）向底部（叶节点）构造分析树\\
+			可以看成是从文法开始\textbf{符号S}推导出词串w是过程	\\
+			\includegraphics[width=400pt]{picture/3-1-7.png}
+			
+			
+			\item 最左推导\\
+			\includegraphics[width=400pt]{picture/3-1-1.png}
+			
+			\item 最右推导\\
+			\includegraphics[width=400pt]{picture/3-1-2.png}
+		
+			\item 最左推导和最右推导的唯一性\\
+			由于他们的每一步所用到的非终结符都是唯一的，所以他们推导出来的也是唯一的。\\
+			\includegraphics[width=400pt]{picture/3-1-3.png}
+			
+			\item 自顶向下的语法分析采用最左推导方式\\
+			由于编译器分析串时是自左向右的。\\
+			\includegraphics[width=400pt]{picture/3-1-4.png}
+			
+			\item 自顶向下语法分析的通用形式\\
+			\includegraphics[width=400pt]{picture/3-1-5.png}
+			
+			\item 预测分析\\
+			\includegraphics[width=400pt]{picture/3-1-6.png}
+		\end{enumerate}
+		
+		
+		\subsection{文法转换}
+		\begin{enumerate}
+			\item 出现的问题\\
+			\includegraphics[width=400pt]{picture/3-2-0.png}\\
+			\includegraphics[width=400pt]{picture/3-2-1.png}
+			
+			\item 消除直接左递归\\
+			\includegraphics[width=400pt]{picture/3-2-2.png}\\
+			\includegraphics[width=400pt]{picture/3-2-3.png}
+			
+			
+			\item 消除间接左递归\\
+			\includegraphics[width=400pt]{picture/3-2-4.png}
+			\includegraphics[width=400pt]{picture/3-2-5.png}
+			\item 提取左公因子\\
+			\includegraphics[width=400pt]{picture/3-2-6.png}
+			\includegraphics[width=400pt]{picture/3-2-7.png}
+			
+			\item 
+		\end{enumerate}
+		
+			
+	
+\end{document}

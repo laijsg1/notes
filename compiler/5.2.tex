@@ -1,0 +1,96 @@
+\documentclass[UTF8]{article}
+\usepackage{ctex}
+\title{\textbf{编译原理}}
+\author{赖钧生}
+\begin{document}
+\maketitle
+
+\section*{5.1}
+\subsection{回顾}
+\begin{itemize}
+	\item DFA,NFA,正则表达式三者表述能力等价
+\end{itemize}
+
+
+\subsection{从正则表达式直接构造DFA}
+\begin{itemize}
+	\item nullable：可以空的节点
+	\item firstpos：以结点n为根节点为根的子树集合
+\end{itemize}
+	
+
+\subsection{Lex：词法分析器}
+\begin{itemize}
+	\item title
+	\item 匹配冲突
+	\begin{enumerate}
+		\item 最长匹配原则
+		\item 规定接受状态的优先顺序（？）
+	\end{enumerate}
+\end{itemize}
+
+\subsection{正规文法到NFA}
+\begin{itemize}
+	\item 正规文法：
+	\begin{enumerate}
+		\item 右线性
+		\item 左线性
+	\end{enumerate}
+\end{itemize}
+
+
+\subsection{NFA到正规文法}
+\subsection{上下文无关文法}
+\begin{itemize}
+	\item $ S\Rightarrow^*\alpha $
+	
+	$\alpha\in T^*  $
+	
+	$\alpha\in L(G) $
+	
+	$\alpha$叫做L(G)的句子
+	\item $ S\Rightarrow^*\beta $
+	
+	$\beta\in (V\cup T)^*  $
+	
+	$\beta\in L(G) $
+	
+	$\beta$叫做L(G)的句型
+	\item 分析树
+\end{itemize}
+
+\subsection{上下文有关文法}
+
+
+
+
+
+
+\section*{6.1}
+\subsection*{语法分析}
+\begin{enumerate}
+	\item 语法分析要解决的问题
+	\begin{itemize}
+		\item 从词法分析中获得的元素在语句中的角色
+		\item 
+	\end{itemize}
+	\item 定义
+	\item 上下文无关文法
+	\begin{enumerate}
+		\item 组成
+		\begin{itemize}
+			\item 终端符号的集合T
+			\item 非终端符号的集合N
+			\item 
+		\end{itemize}
+		\item 推导
+		\begin{itemize}
+			\item 最左推导
+			\item 最右推导
+		\end{itemize}
+	\end{enumerate}
+	
+
+\end{enumerate}
+
+\end{document}

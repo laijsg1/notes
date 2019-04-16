@@ -1,0 +1,108 @@
+\documentclass[UTF8]{article}
+\usepackage{ctex}
+\title{计网第七周笔记}
+\author{laisg}
+\begin{document}
+ \maketitle 
+ \part{网络层}%
+ \label{prt:网络层}
+
+ \section{虚电路和数据报网络}%
+ \label{sec:虚电路和数据报网络}
+
+ \section{路由器工作原理}%
+ \label{sec:路由器工作原理}
+
+ \subsection{Router architecture overview}%
+ \label{sub:router_architecture_overview}
+
+ \includegraphics[width=0.8\linewidth]{} 
+
+ \begin{enumerate}
+   \item Input port functions (排队)\\
+   \includegraphics[width=0.8\linewidth]{} 
+
+   \item Switching fabrics (three types)\\
+   \includegraphics[width=0.8\linewidth]{} 
+
+   \item Output port (排队)\\
+   \includegraphics[width=0.8\linewidth]{} 
+
+   \item 排队
+   \begin{itemize}
+     \item buffer=$\frac{RTT\cdot C}{\sqrt{N}}$
+   \end{itemize}
+   
+ \end{enumerate}
+
+ \section{IP}%
+ \label{sec:ip}
+
+ \paragraph{The Internet Network layer}%
+ \label{par:the_internet_network_layer}
+ \begin{itemize}
+   \item IP
+   \item ICMP
+   \item 选路协议
+ \end{itemize}
+
+ \subsection{IP报文结构}%
+ \begin{enumerate}
+   \item 报文首部有$32\cdot 8 bit$
+   \item 注意IP和TCP的不同
+   \item TCP用的是端口号
+   \item IP用的是ip号
+ \end{enumerate}
+ 
+ \subsection{数据报分片和组装}%
+ \label{sub:数据报分片和组装}
+ 
+ \paragraph{由于不同的链路有不同的MTU,所以需要分片}%
+ \label{par:由于不同的链路有不同的mtu}
+ \begin{itemize}
+   \item 为什么偏移量是片的1/8
+   \item 为什么每个片都有原来的首部
+ \end{itemize}
+
+ \subsection{IP编址 (32bit)}%
+ \label{sub:ip编址}
+
+ \begin{enumerate}
+   \item 子网
+   \item IP地址如何分类
+   \begin{itemize}
+     \item A 0 1-126\\
+     127 用作测试
+     \item B 10 128-191
+     \item C 110 192-223
+     \item 前三个为单播地址
+     \item D
+     \item E
+   \end{itemize}
+   \item 特殊用途的IP
+   \begin{itemize}
+     \item 全为零的IP作为网络本身标识
+   \end{itemize}
+   \item 网络掩码
+   \begin{itemize}
+     \item 子网掩码\\
+     通过向主机号借位来实现子网掩码
+     \item 子网掩码的使用\\
+     通过与IP地址进行\textbf{按位与}运算辨别主机属于哪一个网络
+   \end{itemize}
+ \end{enumerate}
+
+ \section{questions}%
+ \label{sec:questions}
+ 
+ \begin{enumerate}
+   \item IP是如何分配的
+   \begin{itemize}
+     \item 静态
+     \item 动态(DHCP)
+   \end{itemize}
+ \end{enumerate}
+ 
+
+\end{document}
+

@@ -1,0 +1,99 @@
+\documentclass[UTF8]{article}
+\usepackage{ctex}
+\usepackage{graphicx}
+\title{第7周编译原理课堂笔记}
+\author{laisg}
+\begin{document}
+\maketitle
+ \section{自顶向下的语法分析}%
+ \label{sec:自顶向下的语法分析}
+ \subsection{first函数}%
+ \label{sub:first函数}
+ \begin{figure}[]
+   \centering
+   \includegraphics[width=0.8\linewidth]{picture/4-4-1.png}
+ \end{figure}
+
+ \begin{figure}[]
+   \centering
+   \includegraphics[width=0.8\linewidth]{picture/4-4-2.png}
+ \end{figure}
+
+ \begin{figure}[]
+   \centering
+   \includegraphics[width=0.8\linewidth]{picture/4-4-3.png}
+ \end{figure}
+ \paragraph{first ($\alpha$)被定义为可从$\alpha$推导的到的串的首符号的集合}%
+ \label{par:first_alpha_被定义为可从_alpha_推导的到的串的首符号的集合}
+ 
+ 
+ \subsection{follow函数}%
+ \label{sub:follow函数}
+ \paragraph{对于非终结符号A，follow (A)被定义为可能在某些句型中紧跟在A右边的终结符号的集合}%
+ \label{par:对于非终结符号a_follow_a_别定义为可能在某些句型中紧跟在a右边的终结符号的集合}
+ 
+ \begin{figure}[]
+   \centering
+   \includegraphics[width=0.8\linewidth]{picture/4-4-4.png}
+ \end{figure}
+
+ \begin{figure}[]
+   \centering
+   \includegraphics[width=0.8\linewidth]{picture/4-4-5.png}
+ \end{figure}
+
+ \begin{figure}[]
+   \centering
+   \includegraphics[width=0.8\linewidth]{picture/4-4-6.png}
+ \end{figure}
+ 
+ \begin{enumerate}
+   \item follow (F)=\{*,+,\$,$\varepsilon$\}
+   \item follow (T')=\{+,\$,$\varepsilon$\}
+   \item follow (T)=\{+,\$,$\varepsilon$\}
+   \item follow (E')=\{\$,$\varepsilon$\}
+   \item follow (E)=\{\$,$\varepsilon$\}
+ \end{enumerate}
+ \subsection{LL (1)文法}%
+ \label{sub:ll_1_文法}
+ \paragraph{解决做产生式选择的问题}%
+ \label{par:解决做产生式选择的问题}
+ \begin{enumerate}
+   \item 预测分析器的转换图\\
+   要构造一个文法的转换图，首先要消除左递归，然后对文法提前左公因子。
+   【】
+   \item 构造预测分析表\\
+   \textbf{严重不理解第二步}\\
+   \begin{figure}[]
+     \centering
+     \includegraphics[width=0.8\linewidth]{picture/4-4-7.png}
+   \end{figure}
+
+   \begin{figure}[]
+     \centering
+     \includegraphics[width=0.8\linewidth]{picture/4-4-8.png}
+   \end{figure}
+
+   \item 递归预测分析
+   \item 非递归的预测分析（利用到预测分析表和栈）
+ \end{enumerate}
+
+ \section{自底向上的语法分析}%
+ \label{sec:自底向上的语法分析}
+ \paragraph{最左规约}%
+ \label{par:最左规约}
+ \subsection{移进-规约}%
+ \label{sub:移进_规约}
+ \paragraph{重点在于：什么时候移进，怎么选择规约}%
+ \label{par:重点在于_什么时候移进_怎么选择规约}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+\end{document}
+

@@ -1,0 +1,77 @@
+\documentclass[UTF8]{article}
+\usepackage{ctex}
+\usepackage{graphicx}
+\title{编译原理}
+\author{laisg}
+\begin{document}
+ \maketitle
+ 
+ \part{语法分析\_1}%
+ \section{S\_文法}%
+ \label{sec:s_文法}
+
+ \includegraphics[width=0.8\linewidth]{picture/4-2.png}
+
+ \section{FOLLOW集}%
+ \label{sec:follow集}
+
+ \includegraphics[width=0.8\linewidth]{picture/4-3.png}
+
+ \section{产生式的SELECT集【\textbf{划重点}】}%
+ \label{sec:产生式的select集_划重点_}
+
+ \includegraphics[width=0.8\linewidth]{picture/4-4.png}
+
+ \section{FIRST集}%
+ \label{sec:first集}
+
+ \includegraphics[width=0.8\linewidth]{picture/4-5.png}
+
+ \section{LL（1）文法}%
+ \label{sec:ll_1_文法}
+
+ \includegraphics[width=0.8\linewidth]{picture/4-6.png}
+ 
+ \part{语法分析\_2}%
+ \label{prt:语法分析_2}
+ \section{FIRST集和FOLLOW集的计算}%
+ \label{sec:first集和follow集的计算}
+ 
+ \subsection{FIRST集的计算}%
+ \label{sub:first集的计算}
+
+ \includegraphics[width=0.8\linewidth]{picture/4-7.png}
+ 
+ \includegraphics[width=0.8\linewidth]{picture/4-8.png}
+
+ \subsection{FOLLOW集的计算}%
+ \label{sub:follow集的计算}
+
+ \includegraphics[width=0.8\linewidth]{picture/4-9.png}
+ 
+ \includegraphics[width=0.8\linewidth]{picture/4-10.png}
+
+ \section{SELECT集的计算}%
+ \label{sec:select集的计算}
+
+ \includegraphics[width=0.8\linewidth]{picture/4-4.png}
+ 
+ \includegraphics[width=0.8\linewidth]{picture/4-11.png}
+
+ \section{通过SELECT集推出预测分析表}%
+ \label{sec:通过select集推出预测分析表}
+
+ \includegraphics[width=0.8\linewidth]{picture/4-12.png}
+ 
+ \includegraphics[width=0.8\linewidth]{picture/4-13.png}
+ 
+ \includegraphics[width=0.8\linewidth]{picture/4-14.png}
+ \section{预测分析发实现步骤}%
+ \label{sec:预测分析发实现步骤}
+ 
+ \includegraphics[width=0.8\linewidth]{picture/4-15.png}
+ 
+ 
+ 
+\end{document}
+
